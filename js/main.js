@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const newCharacter = document.querySelector('#star-wars-form');
   newCharacter.addEventListener('submit', handleNewCharacter);
+
+  const deleteAll = document.querySelector('#delete-all');
+  deleteAll.addEventListener('click', handleDelete);
 });
 
 const handleNewCharacter = function (event) {
@@ -26,17 +29,17 @@ const createNewCharacter = function (form) {
 
 
   // create name
-  const name = document.createElement('th');
+  const name = document.createElement('td');
   name.textContent = form.name.value;
 
   //create class
 
-  const characterClass = document.createElement('th');
+  const characterClass = document.createElement('td');
   characterClass.textContent = form.class.value;
 
   //create forceSensitive
 
-  const force = document.createElement('th');
+  const force = document.createElement('td');
   force.textContent = form.forceSensitive.value;
 
   //append to container
@@ -46,4 +49,9 @@ const createNewCharacter = function (form) {
 
   return newCharacterContainer
 
+};
+
+const handleDelete = function(event) {
+ const characters = document.querySelector('#output');
+ characters.textContent = "";
 };
