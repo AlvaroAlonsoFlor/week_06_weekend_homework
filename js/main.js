@@ -26,7 +26,8 @@ const handleNewCharacter = function (event) {
 const createNewCharacter = function (form) {
 
   //character
-  const newCharacterContainer = document.createElement('tr')
+  let newCharacterContainer = document.createElement('tr');
+  newCharacterContainer.classList.add('character');
 
 
   // create name
