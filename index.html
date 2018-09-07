@@ -8,15 +8,15 @@
   </head>
   <body>
 
-    <form id='starWarsForm'>
-      <label for="">Name</label>
-      <input type="text" >
+    <form id='star-wars-form'>
+      <label for="name">Name</label>
+      <input type="text" id="name" required>
 
-      <label>Class</label>
-      <input type="text" name="" value="">
+      <label for="class">Class</label>
+      <input type="text" id="class" required>
 
-      <label for="">Force sensitive</label>
-      <select name="">
+      <label for="forceSensitive">Force sensitive</label>
+      <select id="forceSensitive">
         <option value="true">Yes</option>
         <option value="false">No</option>
       </select>
@@ -28,6 +28,8 @@
     </form>
 
     <button>Delete All</button>
+
+    <table id="output"></table>
 
   </body>
 </html>
