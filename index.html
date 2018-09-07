@@ -7,27 +7,26 @@
     <script src="js/main.js"> </script>
   </head>
   <body>
+    <div class="form_wrapper">
+      <form id='star-wars-form'>
+        <h1>Create your character</h1>
 
-    <form id='star-wars-form'>
-      <label for="name">Name</label>
-      <input type="text" id="name" required>
+        <label for="name">Name</label>
+        <input type="text" id="name" required>
 
-      <label for="class">Class</label>
-      <input type="text" id="class" required>
+        <label for="class">Class</label>
+        <input type="text" id="class" required>
 
-      <label for="forceSensitive">Force sensitive</label>
-      <select id="forceSensitive">
-        <option value="True">Yes</option>
-        <option value="False">No</option>
-      </select>
+        <label for="forceSensitive">Force sensitive</label>
+        <select id="forceSensitive">
+          <option value="True">Yes</option>
+          <option value="False">No</option>
+        </select>
 
-      <input type="submit" value="save">
+        <button type="submit" value="submit-true">Save</button>
 
-
-
-    </form>
-
-    <button id="delete-all">Delete All</button>
+      </form>
+    </div>
 
     <table id="output">
       <tr>
@@ -54,9 +53,9 @@
         <td>True</td>
       </tr>
 
-
-
     </table>
+
+    <button id="delete-all">Delete All</button>
 
   </body>
 </html>

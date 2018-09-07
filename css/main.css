@@ -1,3 +1,12 @@
+body {
+  font-family: Verdana, sans-serif;
+}
+
+h1 {
+  font-variant: small-caps;
+  font-size: 1.8em;
+}
+
 table {
   border-collapse: collapse;
   background-color: Grey;
@@ -14,4 +23,44 @@ td, th {
 
 td {
   background-color: white;
+}
+
+.form_wrapper {
+  display: grid;
+  margin-bottom: 3%;
+}
+
+form {
+  margin: auto;
+  background-color: #001a33;
+  padding: 2%;
+  color: white;
+  min-width: 40%;
+  border-radius: 5px;
+}
+
+label, select {
+  font-variant: small-caps;
+}
+
+label, input, select {
+  display: block;
+  padding: 2%;
+  margin: auto;
+  font-size: 1.5em;
+  max-width: 80%;
+
+}
+
+input[value=submit] {
+  background-color: black;
+}
+
+button {
+  padding: 2%;
+  font-size: 1.3em;
+  background: LightSkyBlue;
+  color: white;
+  border: none;
+  border-radius: 0.4em;  
 }

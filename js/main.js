@@ -12,11 +12,9 @@ const handleNewCharacter = function (event) {
   event.preventDefault();
   //create character
   const character = createNewCharacter(event.target);
-  console.log(event.target);
 
   //select element to insert
   list = document.querySelector('#output')
-
   //append to element
   list.appendChild(character)
 
@@ -33,6 +31,7 @@ const createNewCharacter = function (form) {
   // create name
   const name = document.createElement('td');
   name.textContent = form.name.value;
+
 
   //create class
 
