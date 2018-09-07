@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const newCharacter = document.querySelector('#star-wars-form');
   newCharacter.addEventListener('submit', handleNewCharacter);
 
-  const deleteAll = document.querySelector('#delete-all');
-  deleteAll.addEventListener('click', handleDelete);
+  const button = document.querySelector('#delete-all');
+  button.addEventListener('click', handleDelete);
+
 });
 
 const handleNewCharacter = function (event) {
@@ -52,6 +53,13 @@ const createNewCharacter = function (form) {
 };
 
 const handleDelete = function(event) {
- const characters = document.querySelector('#output');
- characters.textContent = "";
+ // const characters = document.querySelector('#output');
+ // characters.textContent = "";
+
+ const characters = document.querySelectorAll('tr.character');
+ characters.forEach( (character) => {
+   character.remove('tr.character');
+ });
+
+
 };
