@@ -7,55 +7,91 @@
     <script src="js/main.js"> </script>
   </head>
   <body>
-    <div class="form_wrapper">
-      <form id='star-wars-form'>
-        <h1>Create your character</h1>
-
-        <label for="name">Name</label>
-        <input type="text" id="name" required>
-
-        <label for="class">Class</label>
-        <input type="text" id="class" required>
-
-        <label for="forceSensitive">Force sensitive</label>
-        <select id="forceSensitive">
-          <option value="True">Yes</option>
-          <option value="False">No</option>
-        </select>
-
-        <button type="submit" value="submit-true">Save</button>
-
-      </form>
-    </div>
-
     <table id="output">
       <tr>
         <th>Name</th>
         <th>Class</th>
         <th>Force sensitive</th>
+        <th>Faction</th>
       </tr>
 
       <tr class="character">
         <td>Han Solo</td>
         <td>Smuggler</td>
         <td>False</td>
+        <td>Rebellion</td>
       </tr>
 
       <tr class="character">
         <td>Qui-Gon Jin</td>
         <td>Jedi</td>
         <td>True</td>
+        <td>Republic</td>
       </tr>
 
       <tr class="character"#>
         <td>Darth Maul</td>
         <td>Sith</td>
         <td>True</td>
+        <td>Empire</td>
       </tr>
 
     </table>
 
     <button id="delete-all">Delete All</button>
+
+
+    <div class="form_wrapper">
+      <form id='star-wars-form'>
+        <h1>Create your character</h1>
+
+        <ul>
+          <li><label for="name">Name <input type="text" id="name" required></li></label>
+
+          <li><label for="class">Class <input type="text" id="class" required></label>
+          </li>
+        </ul>
+
+
+
+
+
+        <label for="forceSensitive">Force sensitive
+          <select id="forceSensitive">
+            <option value="True">Yes</option>
+            <option value="False">No</option>
+          </select>
+         </label>
+
+
+         <div class="radio-border">
+            <legend>Faction</legend>
+
+
+           <label for="Rebellion"> <input type="radio" name="faction" value="rebellion" id="rebellion">Rebellion</label>
+
+
+           <label for="Empire"> <input type="radio" name="faction" value="empire" id="empire">Empire</label>
+
+
+           <label for="republic"> <input type="radio" name="faction" value="Republic" id="republic">Republic</label>
+
+
+           <label for="cis"><input type="radio" name="faction" value="CIS" id="cis"> CIS</label>
+
+
+           <label for="first_order"><input type="radio" name="faction" value="First Order" id="first_order"> First Order</label>
+
+
+           <label for="unknown"> <input type="radio" name="faction" value="Unknown" id="unknown">Unknown</label>
+         </div>
+
+        <button class="block" type="submit" value="submit-true" id="save">Save</button>
+
+      </form>
+    </div>
+
+
 
   </body>
 </html>

@@ -43,10 +43,16 @@ const createNewCharacter = function (form) {
   const force = document.createElement('td');
   force.textContent = form.forceSensitive.value;
 
+  //create faction
+
+  const faction = document.createElement('td');
+  faction.textContent = form.faction.value;
+
   //append to container
   newCharacterContainer.appendChild(name);
   newCharacterContainer.appendChild(characterClass);
   newCharacterContainer.appendChild(force);
+  newCharacterContainer.appendChild(faction);
 
   return newCharacterContainer
 
